@@ -1,6 +1,7 @@
 package dio.spring_data_jpa.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -10,7 +11,7 @@ import dio.spring_data_jpa.model.User;
 
 public interface UserRepository extends JpaRepository<User,Integer>{
 
-    List<User> findByNameContaining(String name);
+    Optional<User> findByName(String name);
 
 
     //Query Override
