@@ -7,6 +7,9 @@ import jakarta.persistence.*;
 public class User {
     
     public User() {
+        this.id=0;
+        this.name="";
+        this.password="";
     }
     public User(String name, String password) {
         this.name = name;
@@ -42,8 +45,7 @@ public class User {
     public Integer getId() {
         return id;
     }
-    public void setId(Integer id) {
+    public void setId(Integer id){
         this.id = id;
     }
-   
 }
